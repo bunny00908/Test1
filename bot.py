@@ -39,7 +39,7 @@ def extract_credit_cards(text):
 def format_card_message(cc):
     """Format extracted CC information into readable message"""
     card_number, month, year, cvv = cc
-    return f"💳 Card: <code>{card_number}|{month}|{year}|{cvv}</code>\n"
+    return f"Card: <code>{card_number}|{month}|{year}|{cvv}</code>\n"
 
 async def delete_after_delay(message, delay=120):
     """Delete message after specified delay"""
