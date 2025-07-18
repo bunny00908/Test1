@@ -11,7 +11,7 @@ API_HASH = "82e6373f14a917289086553eefc64afe"
 BOT_TOKEN = "8039426526:AAFSqWU-fRl_gwTPqYLK8yxuS0N9at1hC4s"
 
 SOURCE_GROUPS = [-1002854404728]  # Default source group
-TARGET_CHANNELS = [-1002557527694, -1002881804094]  # Default target channels
+TARGET_CHANNELS = []  # Default target channels
 
 ADMIN_ID = 5387926427  # Your Telegram user ID
 WELCOME_IMAGE = "https://cdn.nekos.life/neko/neko370.jpeg"
@@ -258,7 +258,7 @@ async def cc_scraper(client, message: Message):
                 logging.warning(f"Error sending/deleting message in {channel}: {e}")
 
 # Check admin status when added to new group
-@app.on_message(filters.new_chat_members))
+@app.on_message(filters.new_chat_members)
 async def new_chat_handler(client, message: Message):
     if app.me.id in [user.id for user in message.new_chat_members]:
         chat_id = message.chat.id
